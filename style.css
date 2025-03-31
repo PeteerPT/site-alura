@@ -27,7 +27,7 @@ body {
     background-size: contain;
     align-items: center;
     text-align: center;
-    }
+}
 
 .container {
     height: 100vh;
@@ -63,6 +63,7 @@ body {
 
 .container__imagem {
     margin: 1em 0 2em 0;
+    width: 45em;
 }
 
 .container__caixa {
@@ -165,4 +166,113 @@ body {
     color: var(--cor-de-fundo);
     box-shadow: 0 0 10px var(--botao-azul-efeito), 0 0 20px var(--botao-azul-efeito);
     transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .principal {
+        background-image: url("imgs/Background2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    /* Reestrutura o container para layout vertical e centralizado */
+    .container {
+        height: auto;
+        display: block;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .container__caixa {
+        margin: 0 auto;
+    }
+
+    .container__titulo {
+        font-size: 20px;
+    }
+
+    .container__imagem {
+        width: 30em;
+    }
+
+    /* Botões: tamanho reduzido e centralizados */
+    .container__botao {
+        font-size: 12px;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Reestrutura as seções secundárias */
+    .secundario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    /* Reordena a imagem para ficar no topo e centraliza */
+    .secundario__imagem {
+        order: -1;
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 1em;
+    }
+
+    .container__descricao {
+        margin: 0 auto;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+    }
+
+    .descricao__texto {
+        font-size: 14px;
+    }
+
+    /* Ajuste da seção dispositivos: centraliza e reorganiza os itens */
+    .dispositivos__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 3em 0;
+    }
+
+    .dispositivos__lista li {
+        flex: 1 1 45%;
+        margin: 1em;
+        text-align: center;
+    }
+
+    .lista__item {
+        font-size: 24px;
+    }
+
+    /* Ajusta o rodapé */
+    .rodape {
+        margin: 0 auto;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .rodape__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .lista__link {
+        margin: 0.5em;
+        flex: 1 1 30%;
+        text-align: center;
+    }
 }
